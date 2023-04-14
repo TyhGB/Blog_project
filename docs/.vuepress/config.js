@@ -10,7 +10,8 @@ module.exports = {
             "/foo/": [
                 ["", "Foo Hello"],
                 ["one", "One readme"],
-                ["two", "Second"]
+                ["two", "Second"],
+                ["three", "Third"]
             ]
           },
       }
