@@ -1,0 +1,15 @@
+{
+    "name": "vuepress-blog",
+    "version": "1.0.0",
+    "description": "使用VuePress搭建的Blog",
+    "main": "index.js",
+    "author": "Danny",
+    "license": "MIT",
+    "devDependencies": {
+        "vuepress": "^1.9.8"
+    },
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    }
+}
