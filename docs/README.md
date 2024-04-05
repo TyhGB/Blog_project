@@ -1,16 +1,16 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
+heroImage: /logo.png
+heroText: Danny Tao's Blog
+tagline: 个人博客
+actionText: 开始浏览 →
+actionLink: /Objective-C/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: 多语言技术栈
+  details: 记录分享各种语言的学习和成长之路。
+- title: 个人爱好记录
+  details: 记录培养个人的一些爱好，让生活精彩一些。
+- title: 成长历程
+  details: 记录一些个人心情、发展、规划等等。
+footer: MIT Licensed | Copyright © 2024-Danny,Tao
 ---
