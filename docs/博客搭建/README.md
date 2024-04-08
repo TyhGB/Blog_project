@@ -128,3 +128,63 @@ key 为 /foo/ 代表foo导航（目录下）
 
 ![文件目录](image-1.png)
 ![网页截图](image-2.png)
+
+## 部署
+
+### 部署到Github
+
+1.github 创建一个blog 的public 仓库;
+
+2.配置仓库名称 配置docs/.vuepress/config.js文件中的base, 如果打算发布到https\://\<USERNAME>.github.io/\<REPO>/(也就是说你的仓库在:  <https://github.com/>\<USERNAME>/\<REPO> ), 此处我的仓库为: blog, 则将base按照如下配置即可:
+
+```text
+    //docs/.vuepress/config.js
+    module.exports = {
+      base: "/blog/"
+    }
+```
+
+3.在项目根目录下，创建一个deploy.sh 的脚本，内容如下(需要根据实际内容替换):
+
+```shell
+
+#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 生成静态文件
+npm run docs:build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+# 如果是发布到自定义域名
+# echo 'www.example.com' > CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果发布到 https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
+
+cd -
+
+```
+
+4.运行脚本 提交代码
+
+5.setting Github Pages
+这是最后一步了，在 GitHub 项目点击 Setting 按钮，找到 GitHub Pages - Source，选择 gh-pages 分支，点击 Save 按钮后，静静地等待它部署完成即可。
+
+github上有两个repo：
+
+1.blog：博客的静态网页项目
+
+2.Blog\_project： vuepress 的编辑项目
+
+### 部署到自己服务器的 后续更新
